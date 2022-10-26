@@ -1,0 +1,26 @@
+
+
+============================== 2022-10-26 12:43:19.996860 | 8d2a1235-fb3a-43f8-a6e8-4cf901ad1dec ==============================
+[0m12:43:19.996886 [info ] [MainThread]: Running with dbt=1.3.0
+[0m12:43:19.997394 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/home/tobazan/.dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'skip_profile_setup': False, 'which': 'init', 'indirect_selection': 'eager'}
+[0m12:43:19.997632 [debug] [MainThread]: Tracking: tracking
+[0m12:43:20.009693 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3f66df3730>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3f66df3880>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3f66df38b0>]}
+[0m12:43:33.421044 [debug] [MainThread]: Starter project path: /home/tobazan/.local/lib/python3.8/site-packages/dbt/include/starter_project
+[0m12:43:45.808262 [info ] [MainThread]: 
+Your new dbt project "oly_dbt" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m12:43:45.808767 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3f66df3a60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3f66df3d00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3f66df3d30>]}
+[0m12:43:45.809335 [debug] [MainThread]: Flushing usage events

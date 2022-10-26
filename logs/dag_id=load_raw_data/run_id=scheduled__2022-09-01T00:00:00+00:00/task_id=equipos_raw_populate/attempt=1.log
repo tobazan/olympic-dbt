@@ -1,0 +1,75 @@
+[2022-10-26 13:37:50,661] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: load_raw_data.equipos_raw_populate scheduled__2022-09-01T00:00:00+00:00 [queued]>
+[2022-10-26 13:37:50,711] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: load_raw_data.equipos_raw_populate scheduled__2022-09-01T00:00:00+00:00 [queued]>
+[2022-10-26 13:37:50,712] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2022-10-26 13:37:50,712] {taskinstance.py:1357} INFO - Starting attempt 1 of 2
+[2022-10-26 13:37:50,712] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2022-10-26 13:37:50,784] {taskinstance.py:1377} INFO - Executing <Task(PostgresOperator): equipos_raw_populate> on 2022-09-01 00:00:00+00:00
+[2022-10-26 13:37:50,792] {standard_task_runner.py:52} INFO - Started process 458 to run task
+[2022-10-26 13:37:50,803] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'load_raw_data', 'equipos_raw_populate', 'scheduled__2022-09-01T00:00:00+00:00', '--job-id', '15', '--raw', '--subdir', 'DAGS_FOLDER/raw-dag.py', '--cfg-path', '/tmp/tmpykxfzwju', '--error-file', '/tmp/tmpsxsf3c_s']
+[2022-10-26 13:37:50,805] {standard_task_runner.py:80} INFO - Job 15: Subtask equipos_raw_populate
+[2022-10-26 13:37:51,015] {task_command.py:369} INFO - Running <TaskInstance: load_raw_data.equipos_raw_populate scheduled__2022-09-01T00:00:00+00:00 [running]> on host b1681a16582a
+[2022-10-26 13:37:51,359] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=load_raw_data
+AIRFLOW_CTX_TASK_ID=equipos_raw_populate
+AIRFLOW_CTX_EXECUTION_DATE=2022-09-01T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-09-01T00:00:00+00:00
+[2022-10-26 13:37:51,381] {base.py:68} INFO - Using connection ID 'postgres-default' for task execution.
+[2022-10-26 13:37:51,389] {dbapi.py:208} INFO - Running statement: COPY equipos_raw FROM '/tmp/sample_data/paises.csv' DELIMITER ',' CSV HEADER;, parameters: None
+[2022-10-26 13:37:51,402] {dbapi.py:216} INFO - Rows affected: 1184
+[2022-10-26 13:37:51,448] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=load_raw_data, task_id=equipos_raw_populate, execution_date=20220901T000000, start_date=20221026T133750, end_date=20221026T133751
+[2022-10-26 13:37:51,538] {local_task_job.py:156} INFO - Task exited with return code 0
+[2022-10-26 13:37:51,774] {local_task_job.py:273} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2022-10-26 14:27:32,471] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: load_raw_data.equipos_raw_populate scheduled__2022-09-01T00:00:00+00:00 [queued]>
+[2022-10-26 14:27:32,485] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: load_raw_data.equipos_raw_populate scheduled__2022-09-01T00:00:00+00:00 [queued]>
+[2022-10-26 14:27:32,485] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2022-10-26 14:27:32,485] {taskinstance.py:1357} INFO - Starting attempt 1 of 2
+[2022-10-26 14:27:32,485] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2022-10-26 14:27:32,503] {taskinstance.py:1377} INFO - Executing <Task(PostgresOperator): equipos_raw_populate> on 2022-09-01 00:00:00+00:00
+[2022-10-26 14:27:32,508] {standard_task_runner.py:52} INFO - Started process 258 to run task
+[2022-10-26 14:27:32,512] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'load_raw_data', 'equipos_raw_populate', 'scheduled__2022-09-01T00:00:00+00:00', '--job-id', '7', '--raw', '--subdir', 'DAGS_FOLDER/raw-dag.py', '--cfg-path', '/tmp/tmpoqqzkjdm', '--error-file', '/tmp/tmpus8dub6z']
+[2022-10-26 14:27:32,513] {standard_task_runner.py:80} INFO - Job 7: Subtask equipos_raw_populate
+[2022-10-26 14:27:32,597] {task_command.py:369} INFO - Running <TaskInstance: load_raw_data.equipos_raw_populate scheduled__2022-09-01T00:00:00+00:00 [running]> on host d860ef10ab5f
+[2022-10-26 14:27:32,752] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=load_raw_data
+AIRFLOW_CTX_TASK_ID=equipos_raw_populate
+AIRFLOW_CTX_EXECUTION_DATE=2022-09-01T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-09-01T00:00:00+00:00
+[2022-10-26 14:27:32,784] {base.py:68} INFO - Using connection ID 'postgres-default' for task execution.
+[2022-10-26 14:27:32,794] {dbapi.py:208} INFO - Running statement: COPY equipos_raw FROM '/tmp/sample_data/paises.csv' DELIMITER ',' CSV HEADER;, parameters: None
+[2022-10-26 14:27:32,813] {dbapi.py:216} INFO - Rows affected: 1184
+[2022-10-26 14:27:32,855] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=load_raw_data, task_id=equipos_raw_populate, execution_date=20220901T000000, start_date=20221026T142732, end_date=20221026T142732
+[2022-10-26 14:27:32,927] {local_task_job.py:156} INFO - Task exited with return code 0
+[2022-10-26 14:27:33,045] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2022-10-26 14:47:47,040] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: load_raw_data.equipos_raw_populate scheduled__2022-09-01T00:00:00+00:00 [queued]>
+[2022-10-26 14:47:47,064] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: load_raw_data.equipos_raw_populate scheduled__2022-09-01T00:00:00+00:00 [queued]>
+[2022-10-26 14:47:47,064] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2022-10-26 14:47:47,064] {taskinstance.py:1357} INFO - Starting attempt 1 of 2
+[2022-10-26 14:47:47,065] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2022-10-26 14:47:47,094] {taskinstance.py:1377} INFO - Executing <Task(PostgresOperator): equipos_raw_populate> on 2022-09-01 00:00:00+00:00
+[2022-10-26 14:47:47,103] {standard_task_runner.py:52} INFO - Started process 290 to run task
+[2022-10-26 14:47:47,112] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'load_raw_data', 'equipos_raw_populate', 'scheduled__2022-09-01T00:00:00+00:00', '--job-id', '9', '--raw', '--subdir', 'DAGS_FOLDER/raw-dag.py', '--cfg-path', '/tmp/tmp4vz72imt', '--error-file', '/tmp/tmpo933jn08']
+[2022-10-26 14:47:47,114] {standard_task_runner.py:80} INFO - Job 9: Subtask equipos_raw_populate
+[2022-10-26 14:47:47,222] {task_command.py:369} INFO - Running <TaskInstance: load_raw_data.equipos_raw_populate scheduled__2022-09-01T00:00:00+00:00 [running]> on host 4af2e895db31
+[2022-10-26 14:47:47,376] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=load_raw_data
+AIRFLOW_CTX_TASK_ID=equipos_raw_populate
+AIRFLOW_CTX_EXECUTION_DATE=2022-09-01T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-09-01T00:00:00+00:00
+[2022-10-26 14:47:47,404] {base.py:68} INFO - Using connection ID 'postgres-default' for task execution.
+[2022-10-26 14:47:47,414] {dbapi.py:208} INFO - Running statement: COPY equipos_raw FROM '/tmp/sample_data/paises.csv' DELIMITER ',' CSV HEADER;, parameters: None
+[2022-10-26 14:47:47,425] {dbapi.py:216} INFO - Rows affected: 1184
+[2022-10-26 14:47:47,455] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=load_raw_data, task_id=equipos_raw_populate, execution_date=20220901T000000, start_date=20221026T144747, end_date=20221026T144747
+[2022-10-26 14:47:47,523] {local_task_job.py:156} INFO - Task exited with return code 0
+[2022-10-26 14:47:47,692] {local_task_job.py:273} INFO - 1 downstream tasks scheduled from follow-on schedule check

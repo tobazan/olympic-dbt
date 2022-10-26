@@ -1,0 +1,34 @@
+[2022-10-26 13:48:58,426] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: dbt_dim.install_dbt scheduled__2022-09-01T00:00:00+00:00 [queued]>
+[2022-10-26 13:48:58,443] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: dbt_dim.install_dbt scheduled__2022-09-01T00:00:00+00:00 [queued]>
+[2022-10-26 13:48:58,444] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2022-10-26 13:48:58,444] {taskinstance.py:1357} INFO - Starting attempt 5 of 6
+[2022-10-26 13:48:58,444] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2022-10-26 13:48:58,464] {taskinstance.py:1377} INFO - Executing <Task(BashOperator): install_dbt> on 2022-09-01 00:00:00+00:00
+[2022-10-26 13:48:58,469] {standard_task_runner.py:52} INFO - Started process 730 to run task
+[2022-10-26 13:48:58,472] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'dbt_dim', 'install_dbt', 'scheduled__2022-09-01T00:00:00+00:00', '--job-id', '29', '--raw', '--subdir', 'DAGS_FOLDER/dbt_dim.py', '--cfg-path', '/tmp/tmph449f4jd', '--error-file', '/tmp/tmporhgv2ql']
+[2022-10-26 13:48:58,473] {standard_task_runner.py:80} INFO - Job 29: Subtask install_dbt
+[2022-10-26 13:48:58,547] {task_command.py:369} INFO - Running <TaskInstance: dbt_dim.install_dbt scheduled__2022-09-01T00:00:00+00:00 [running]> on host b1681a16582a
+[2022-10-26 13:48:58,649] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=dbt_dim
+AIRFLOW_CTX_TASK_ID=install_dbt
+AIRFLOW_CTX_EXECUTION_DATE=2022-09-01T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=5
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-09-01T00:00:00+00:00
+[2022-10-26 13:48:58,650] {subprocess.py:62} INFO - Tmp dir root location: 
+ /tmp
+[2022-10-26 13:48:58,652] {subprocess.py:74} INFO - Running command: ['bash', '-c', 'sudo su *** && whoiam']
+[2022-10-26 13:48:58,662] {subprocess.py:85} INFO - Output:
+[2022-10-26 13:48:58,697] {subprocess.py:92} INFO - bash: line 1: whoiam: command not found
+[2022-10-26 13:48:58,697] {subprocess.py:96} INFO - Command exited with return code 127
+[2022-10-26 13:48:58,715] {taskinstance.py:1889} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/bash.py", line 195, in execute
+    f'Bash command failed. The command returned a non-zero exit code {result.exit_code}.'
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 127.
+[2022-10-26 13:48:58,721] {taskinstance.py:1400} INFO - Marking task as UP_FOR_RETRY. dag_id=dbt_dim, task_id=install_dbt, execution_date=20220901T000000, start_date=20221026T134858, end_date=20221026T134858
+[2022-10-26 13:48:58,738] {standard_task_runner.py:97} ERROR - Failed to execute job 29 for task install_dbt (Bash command failed. The command returned a non-zero exit code 127.; 730)
+[2022-10-26 13:48:58,765] {local_task_job.py:156} INFO - Task exited with return code 1
+[2022-10-26 13:48:58,818] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

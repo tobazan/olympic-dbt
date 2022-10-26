@@ -1,0 +1,130 @@
+[2022-10-26 13:49:54,909] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: dbt_dim.deportistas_dim scheduled__2022-09-01T00:00:00+00:00 [queued]>
+[2022-10-26 13:49:54,922] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: dbt_dim.deportistas_dim scheduled__2022-09-01T00:00:00+00:00 [queued]>
+[2022-10-26 13:49:54,922] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2022-10-26 13:49:54,922] {taskinstance.py:1357} INFO - Starting attempt 1 of 2
+[2022-10-26 13:49:54,922] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2022-10-26 13:49:54,944] {taskinstance.py:1377} INFO - Executing <Task(BashOperator): deportistas_dim> on 2022-09-01 00:00:00+00:00
+[2022-10-26 13:49:54,949] {standard_task_runner.py:52} INFO - Started process 763 to run task
+[2022-10-26 13:49:54,953] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'dbt_dim', 'deportistas_dim', 'scheduled__2022-09-01T00:00:00+00:00', '--job-id', '31', '--raw', '--subdir', 'DAGS_FOLDER/dbt_dim.py', '--cfg-path', '/tmp/tmpz_pz_uy2', '--error-file', '/tmp/tmpezkr0mbg']
+[2022-10-26 13:49:54,955] {standard_task_runner.py:80} INFO - Job 31: Subtask deportistas_dim
+[2022-10-26 13:49:55,052] {task_command.py:369} INFO - Running <TaskInstance: dbt_dim.deportistas_dim scheduled__2022-09-01T00:00:00+00:00 [running]> on host b1681a16582a
+[2022-10-26 13:49:55,321] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=dbt_dim
+AIRFLOW_CTX_TASK_ID=deportistas_dim
+AIRFLOW_CTX_EXECUTION_DATE=2022-09-01T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-09-01T00:00:00+00:00
+[2022-10-26 13:49:55,328] {subprocess.py:62} INFO - Tmp dir root location: 
+ /tmp
+[2022-10-26 13:49:55,329] {subprocess.py:74} INFO - Running command: ['bash', '-c', 'cd /opt/dbt/oly_dbt && dbt run --select +deportistas_dim']
+[2022-10-26 13:49:55,348] {subprocess.py:85} INFO - Output:
+[2022-10-26 13:49:55,352] {subprocess.py:92} INFO - bash: line 1: dbt: command not found
+[2022-10-26 13:49:55,353] {subprocess.py:96} INFO - Command exited with return code 127
+[2022-10-26 13:49:55,396] {taskinstance.py:1889} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/bash.py", line 195, in execute
+    f'Bash command failed. The command returned a non-zero exit code {result.exit_code}.'
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 127.
+[2022-10-26 13:49:55,405] {taskinstance.py:1400} INFO - Marking task as UP_FOR_RETRY. dag_id=dbt_dim, task_id=deportistas_dim, execution_date=20220901T000000, start_date=20221026T134954, end_date=20221026T134955
+[2022-10-26 13:49:55,436] {standard_task_runner.py:97} ERROR - Failed to execute job 31 for task deportistas_dim (Bash command failed. The command returned a non-zero exit code 127.; 763)
+[2022-10-26 13:49:55,455] {local_task_job.py:156} INFO - Task exited with return code 1
+[2022-10-26 13:49:55,626] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2022-10-26 14:28:01,106] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: dbt_dim.deportistas_dim scheduled__2022-09-01T00:00:00+00:00 [queued]>
+[2022-10-26 14:28:01,121] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: dbt_dim.deportistas_dim scheduled__2022-09-01T00:00:00+00:00 [queued]>
+[2022-10-26 14:28:01,122] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2022-10-26 14:28:01,122] {taskinstance.py:1357} INFO - Starting attempt 1 of 2
+[2022-10-26 14:28:01,122] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2022-10-26 14:28:01,142] {taskinstance.py:1377} INFO - Executing <Task(BashOperator): deportistas_dim> on 2022-09-01 00:00:00+00:00
+[2022-10-26 14:28:01,152] {standard_task_runner.py:52} INFO - Started process 286 to run task
+[2022-10-26 14:28:01,158] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'dbt_dim', 'deportistas_dim', 'scheduled__2022-09-01T00:00:00+00:00', '--job-id', '18', '--raw', '--subdir', 'DAGS_FOLDER/dbt_dim.py', '--cfg-path', '/tmp/tmp5zlfdx__', '--error-file', '/tmp/tmpt2k596zf']
+[2022-10-26 14:28:01,160] {standard_task_runner.py:80} INFO - Job 18: Subtask deportistas_dim
+[2022-10-26 14:28:01,249] {task_command.py:369} INFO - Running <TaskInstance: dbt_dim.deportistas_dim scheduled__2022-09-01T00:00:00+00:00 [running]> on host d860ef10ab5f
+[2022-10-26 14:28:01,362] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=dbt_dim
+AIRFLOW_CTX_TASK_ID=deportistas_dim
+AIRFLOW_CTX_EXECUTION_DATE=2022-09-01T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-09-01T00:00:00+00:00
+[2022-10-26 14:28:01,363] {subprocess.py:62} INFO - Tmp dir root location: 
+ /tmp
+[2022-10-26 14:28:01,364] {subprocess.py:74} INFO - Running command: ['bash', '-c', 'cd /opt/dbt/oly_dbt && dbt run --select +deportistas_dim']
+[2022-10-26 14:28:01,395] {subprocess.py:85} INFO - Output:
+[2022-10-26 14:28:06,816] {subprocess.py:92} INFO - [0m14:28:06  Running with dbt=1.3.0
+[2022-10-26 14:28:06,963] {subprocess.py:92} INFO - [0m14:28:06  Partial parse save file not found. Starting full parse.
+[2022-10-26 14:28:08,995] {subprocess.py:92} INFO - [0m14:28:08  [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+[2022-10-26 14:28:08,996] {subprocess.py:92} INFO - There are 1 unused configuration paths:
+[2022-10-26 14:28:08,996] {subprocess.py:92} INFO - - models.oly_dbt.example
+[2022-10-26 14:28:08,996] {subprocess.py:92} INFO - 
+[2022-10-26 14:28:09,023] {subprocess.py:92} INFO - [0m14:28:09  Found 2 models, 0 tests, 0 snapshots, 0 analyses, 289 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics
+[2022-10-26 14:28:09,026] {subprocess.py:92} INFO - [0m14:28:09
+[2022-10-26 14:28:09,192] {subprocess.py:92} INFO - [0m14:28:09  Concurrency: 4 threads (target='dev')
+[2022-10-26 14:28:09,192] {subprocess.py:92} INFO - [0m14:28:09
+[2022-10-26 14:28:09,242] {subprocess.py:92} INFO - [0m14:28:09  1 of 1 START sql view model public.deportistas_dim ............................. [RUN]
+[2022-10-26 14:28:09,394] {subprocess.py:92} INFO - [0m14:28:09  1 of 1 ERROR creating sql view model public.deportistas_dim .................... [[31mERROR[0m in 0.15s]
+[2022-10-26 14:28:09,457] {subprocess.py:92} INFO - [0m14:28:09
+[2022-10-26 14:28:09,458] {subprocess.py:92} INFO - [0m14:28:09  Finished running 1 view model in 0 hours 0 minutes and 0.43 seconds (0.43s).
+[2022-10-26 14:28:09,471] {subprocess.py:92} INFO - [0m14:28:09
+[2022-10-26 14:28:09,472] {subprocess.py:92} INFO - [0m14:28:09  [31mCompleted with 1 error and 0 warnings:[0m
+[2022-10-26 14:28:09,473] {subprocess.py:92} INFO - [0m14:28:09
+[2022-10-26 14:28:09,474] {subprocess.py:92} INFO - [0m14:28:09  [33mDatabase Error in model deportistas_dim (models/deportistas_dim.sql)[0m
+[2022-10-26 14:28:09,474] {subprocess.py:92} INFO - [0m14:28:09    column "equipo_id" does not exist
+[2022-10-26 14:28:09,475] {subprocess.py:92} INFO - [0m14:28:09    LINE 16:         equipo_id,
+[2022-10-26 14:28:09,476] {subprocess.py:92} INFO - [0m14:28:09                     ^
+[2022-10-26 14:28:09,477] {subprocess.py:92} INFO - [0m14:28:09    compiled Code at target/run/oly_dbt/models/deportistas_dim.sql
+[2022-10-26 14:28:09,477] {subprocess.py:92} INFO - [0m14:28:09
+[2022-10-26 14:28:09,478] {subprocess.py:92} INFO - [0m14:28:09  Done. PASS=0 WARN=0 ERROR=1 SKIP=0 TOTAL=1
+[2022-10-26 14:28:10,620] {subprocess.py:96} INFO - Command exited with return code 1
+[2022-10-26 14:28:10,643] {taskinstance.py:1889} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/bash.py", line 195, in execute
+    f'Bash command failed. The command returned a non-zero exit code {result.exit_code}.'
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2022-10-26 14:28:10,649] {taskinstance.py:1400} INFO - Marking task as UP_FOR_RETRY. dag_id=dbt_dim, task_id=deportistas_dim, execution_date=20220901T000000, start_date=20221026T142801, end_date=20221026T142810
+[2022-10-26 14:28:10,669] {standard_task_runner.py:97} ERROR - Failed to execute job 18 for task deportistas_dim (Bash command failed. The command returned a non-zero exit code 1.; 286)
+[2022-10-26 14:28:10,711] {local_task_job.py:156} INFO - Task exited with return code 1
+[2022-10-26 14:28:10,750] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2022-10-26 14:48:15,665] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: dbt_dim.deportistas_dim scheduled__2022-09-01T00:00:00+00:00 [queued]>
+[2022-10-26 14:48:15,683] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: dbt_dim.deportistas_dim scheduled__2022-09-01T00:00:00+00:00 [queued]>
+[2022-10-26 14:48:15,684] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2022-10-26 14:48:15,684] {taskinstance.py:1357} INFO - Starting attempt 1 of 2
+[2022-10-26 14:48:15,684] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2022-10-26 14:48:15,703] {taskinstance.py:1377} INFO - Executing <Task(BashOperator): deportistas_dim> on 2022-09-01 00:00:00+00:00
+[2022-10-26 14:48:15,708] {standard_task_runner.py:52} INFO - Started process 316 to run task
+[2022-10-26 14:48:15,713] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'dbt_dim', 'deportistas_dim', 'scheduled__2022-09-01T00:00:00+00:00', '--job-id', '17', '--raw', '--subdir', 'DAGS_FOLDER/dbt_dim.py', '--cfg-path', '/tmp/tmp5m0eojqt', '--error-file', '/tmp/tmpbcvh7lc6']
+[2022-10-26 14:48:15,715] {standard_task_runner.py:80} INFO - Job 17: Subtask deportistas_dim
+[2022-10-26 14:48:15,790] {task_command.py:369} INFO - Running <TaskInstance: dbt_dim.deportistas_dim scheduled__2022-09-01T00:00:00+00:00 [running]> on host 4af2e895db31
+[2022-10-26 14:48:15,903] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=dbt_dim
+AIRFLOW_CTX_TASK_ID=deportistas_dim
+AIRFLOW_CTX_EXECUTION_DATE=2022-09-01T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-09-01T00:00:00+00:00
+[2022-10-26 14:48:15,904] {subprocess.py:62} INFO - Tmp dir root location: 
+ /tmp
+[2022-10-26 14:48:15,905] {subprocess.py:74} INFO - Running command: ['bash', '-c', 'cd /opt/dbt/oly_dbt/models/dim_tables && dbt run --select +deportistas_dim']
+[2022-10-26 14:48:15,915] {subprocess.py:85} INFO - Output:
+[2022-10-26 14:48:20,276] {subprocess.py:92} INFO - [0m14:48:20  Encountered an error while reading the project:
+[2022-10-26 14:48:20,277] {subprocess.py:92} INFO - [0m14:48:20    ERROR: Runtime Error
+[2022-10-26 14:48:20,277] {subprocess.py:92} INFO -   Could not find profile named 'oly_dbt'
+[2022-10-26 14:48:20,293] {subprocess.py:92} INFO - [0m14:48:20  Encountered an error:
+[2022-10-26 14:48:20,293] {subprocess.py:92} INFO - Runtime Error
+[2022-10-26 14:48:20,293] {subprocess.py:92} INFO -   Could not run dbt
+[2022-10-26 14:48:20,597] {subprocess.py:96} INFO - Command exited with return code 2
+[2022-10-26 14:48:20,616] {taskinstance.py:1889} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/bash.py", line 195, in execute
+    f'Bash command failed. The command returned a non-zero exit code {result.exit_code}.'
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 2.
+[2022-10-26 14:48:20,621] {taskinstance.py:1400} INFO - Marking task as UP_FOR_RETRY. dag_id=dbt_dim, task_id=deportistas_dim, execution_date=20220901T000000, start_date=20221026T144815, end_date=20221026T144820
+[2022-10-26 14:48:20,638] {standard_task_runner.py:97} ERROR - Failed to execute job 17 for task deportistas_dim (Bash command failed. The command returned a non-zero exit code 2.; 316)
+[2022-10-26 14:48:20,671] {local_task_job.py:156} INFO - Task exited with return code 1
+[2022-10-26 14:48:20,766] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

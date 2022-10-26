@@ -1,11 +1,11 @@
-FROM python:3.7
-RUN pip install wtforms==2.3.3 && \
-    pip install 'apache-airflow[postgres]==1.10.14' && \
-    pip install dbt==0.15 && \
-    pip install SQLAlchemy==1.3.23
+FROM apache/airflow:2.3.0
 
-RUN mkdir /project
-COPY scripts_airflow/ /project/scripts/
+# Install dbt
+RUN pip install -U pip
+RUN pip install dbt-postgres
+RUN pip install --upgrade Jinja2==3.0.3
 
-RUN chmod +x /project/scripts/init.sh
-ENTRYPOINT [ "/project/scripts/init.sh" ]
+# Expose port for dbt docs
+EXPOSE 8080
+
+CMD ["scheduler"]

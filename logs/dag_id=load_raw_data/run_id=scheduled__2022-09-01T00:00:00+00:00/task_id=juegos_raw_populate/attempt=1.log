@@ -1,0 +1,75 @@
+[2022-10-26 13:37:51,176] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: load_raw_data.juegos_raw_populate scheduled__2022-09-01T00:00:00+00:00 [queued]>
+[2022-10-26 13:37:51,213] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: load_raw_data.juegos_raw_populate scheduled__2022-09-01T00:00:00+00:00 [queued]>
+[2022-10-26 13:37:51,214] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2022-10-26 13:37:51,214] {taskinstance.py:1357} INFO - Starting attempt 1 of 2
+[2022-10-26 13:37:51,214] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2022-10-26 13:37:51,292] {taskinstance.py:1377} INFO - Executing <Task(PostgresOperator): juegos_raw_populate> on 2022-09-01 00:00:00+00:00
+[2022-10-26 13:37:51,302] {standard_task_runner.py:52} INFO - Started process 461 to run task
+[2022-10-26 13:37:51,314] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'load_raw_data', 'juegos_raw_populate', 'scheduled__2022-09-01T00:00:00+00:00', '--job-id', '18', '--raw', '--subdir', 'DAGS_FOLDER/raw-dag.py', '--cfg-path', '/tmp/tmpduejwiel', '--error-file', '/tmp/tmp5ub3t8v7']
+[2022-10-26 13:37:51,315] {standard_task_runner.py:80} INFO - Job 18: Subtask juegos_raw_populate
+[2022-10-26 13:37:51,430] {task_command.py:369} INFO - Running <TaskInstance: load_raw_data.juegos_raw_populate scheduled__2022-09-01T00:00:00+00:00 [running]> on host b1681a16582a
+[2022-10-26 13:37:51,736] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=load_raw_data
+AIRFLOW_CTX_TASK_ID=juegos_raw_populate
+AIRFLOW_CTX_EXECUTION_DATE=2022-09-01T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-09-01T00:00:00+00:00
+[2022-10-26 13:37:51,813] {base.py:68} INFO - Using connection ID 'postgres-default' for task execution.
+[2022-10-26 13:37:51,837] {dbapi.py:208} INFO - Running statement: COPY juegos_raw FROM '/tmp/sample_data/juegos.csv' DELIMITER ',' CSV HEADER;, parameters: None
+[2022-10-26 13:37:51,855] {dbapi.py:216} INFO - Rows affected: 51
+[2022-10-26 13:37:51,950] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=load_raw_data, task_id=juegos_raw_populate, execution_date=20220901T000000, start_date=20221026T133751, end_date=20221026T133751
+[2022-10-26 13:37:51,999] {local_task_job.py:156} INFO - Task exited with return code 0
+[2022-10-26 13:37:52,331] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2022-10-26 14:27:32,515] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: load_raw_data.juegos_raw_populate scheduled__2022-09-01T00:00:00+00:00 [queued]>
+[2022-10-26 14:27:32,530] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: load_raw_data.juegos_raw_populate scheduled__2022-09-01T00:00:00+00:00 [queued]>
+[2022-10-26 14:27:32,531] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2022-10-26 14:27:32,531] {taskinstance.py:1357} INFO - Starting attempt 1 of 2
+[2022-10-26 14:27:32,531] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2022-10-26 14:27:32,553] {taskinstance.py:1377} INFO - Executing <Task(PostgresOperator): juegos_raw_populate> on 2022-09-01 00:00:00+00:00
+[2022-10-26 14:27:32,557] {standard_task_runner.py:52} INFO - Started process 259 to run task
+[2022-10-26 14:27:32,562] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'load_raw_data', 'juegos_raw_populate', 'scheduled__2022-09-01T00:00:00+00:00', '--job-id', '8', '--raw', '--subdir', 'DAGS_FOLDER/raw-dag.py', '--cfg-path', '/tmp/tmpqn12hhk_', '--error-file', '/tmp/tmpqyckid1d']
+[2022-10-26 14:27:32,564] {standard_task_runner.py:80} INFO - Job 8: Subtask juegos_raw_populate
+[2022-10-26 14:27:32,649] {task_command.py:369} INFO - Running <TaskInstance: load_raw_data.juegos_raw_populate scheduled__2022-09-01T00:00:00+00:00 [running]> on host d860ef10ab5f
+[2022-10-26 14:27:32,932] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=load_raw_data
+AIRFLOW_CTX_TASK_ID=juegos_raw_populate
+AIRFLOW_CTX_EXECUTION_DATE=2022-09-01T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-09-01T00:00:00+00:00
+[2022-10-26 14:27:32,966] {base.py:68} INFO - Using connection ID 'postgres-default' for task execution.
+[2022-10-26 14:27:32,976] {dbapi.py:208} INFO - Running statement: COPY juegos_raw FROM '/tmp/sample_data/juegos.csv' DELIMITER ',' CSV HEADER;, parameters: None
+[2022-10-26 14:27:32,983] {dbapi.py:216} INFO - Rows affected: 51
+[2022-10-26 14:27:33,048] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=load_raw_data, task_id=juegos_raw_populate, execution_date=20220901T000000, start_date=20221026T142732, end_date=20221026T142733
+[2022-10-26 14:27:33,113] {local_task_job.py:156} INFO - Task exited with return code 0
+[2022-10-26 14:27:33,185] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2022-10-26 14:47:46,964] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: load_raw_data.juegos_raw_populate scheduled__2022-09-01T00:00:00+00:00 [queued]>
+[2022-10-26 14:47:46,995] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: load_raw_data.juegos_raw_populate scheduled__2022-09-01T00:00:00+00:00 [queued]>
+[2022-10-26 14:47:46,995] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2022-10-26 14:47:46,996] {taskinstance.py:1357} INFO - Starting attempt 1 of 2
+[2022-10-26 14:47:46,996] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2022-10-26 14:47:47,021] {taskinstance.py:1377} INFO - Executing <Task(PostgresOperator): juegos_raw_populate> on 2022-09-01 00:00:00+00:00
+[2022-10-26 14:47:47,026] {standard_task_runner.py:52} INFO - Started process 289 to run task
+[2022-10-26 14:47:47,034] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'load_raw_data', 'juegos_raw_populate', 'scheduled__2022-09-01T00:00:00+00:00', '--job-id', '8', '--raw', '--subdir', 'DAGS_FOLDER/raw-dag.py', '--cfg-path', '/tmp/tmpfdg6tljv', '--error-file', '/tmp/tmpigcjclda']
+[2022-10-26 14:47:47,036] {standard_task_runner.py:80} INFO - Job 8: Subtask juegos_raw_populate
+[2022-10-26 14:47:47,141] {task_command.py:369} INFO - Running <TaskInstance: load_raw_data.juegos_raw_populate scheduled__2022-09-01T00:00:00+00:00 [running]> on host 4af2e895db31
+[2022-10-26 14:47:47,302] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=load_raw_data
+AIRFLOW_CTX_TASK_ID=juegos_raw_populate
+AIRFLOW_CTX_EXECUTION_DATE=2022-09-01T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-09-01T00:00:00+00:00
+[2022-10-26 14:47:47,322] {base.py:68} INFO - Using connection ID 'postgres-default' for task execution.
+[2022-10-26 14:47:47,328] {dbapi.py:208} INFO - Running statement: COPY juegos_raw FROM '/tmp/sample_data/juegos.csv' DELIMITER ',' CSV HEADER;, parameters: None
+[2022-10-26 14:47:47,330] {dbapi.py:216} INFO - Rows affected: 51
+[2022-10-26 14:47:47,370] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=load_raw_data, task_id=juegos_raw_populate, execution_date=20220901T000000, start_date=20221026T144746, end_date=20221026T144747
+[2022-10-26 14:47:47,447] {local_task_job.py:156} INFO - Task exited with return code 0
+[2022-10-26 14:47:47,604] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check
