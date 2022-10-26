@@ -146,6 +146,22 @@ with DAG(dag_id = 'load_raw_data', schedule_interval = "@monthly", default_args 
                         database="airflow"
                         ) 
 
+    metabase_paises_create  = PostgresOperator(task_id='metabase_paises_create',
+                        sql="""CREATE TABLE IF NOT EXISTS metabase_paises (pais varchar(100),
+                                                                            codigo varchar(2));
+                        """,
+                        postgres_conn_id='postgres-default',
+                        autocommit=True,
+                        database="airflow"
+                        )
+    
+    metabase_paises_populate  = PostgresOperator(task_id='metabase_paises_populate',
+                        sql="COPY metabase_paises FROM '/tmp/sample_data/metabase_countries.csv' DELIMITER ',' CSV HEADER;",
+                        postgres_conn_id='postgres-default',
+                        autocommit=True,
+                        database="airflow"
+                        ) 
+
     start_task >> [generos_raw_create, deportes_raw_create, equipos_raw_create, juegos_raw_create]
     generos_raw_create >> generos_raw_populate
     deportes_raw_create >> deportes_raw_populate >> eventos_raw_create >> eventos_raw_populate
@@ -155,3 +171,4 @@ with DAG(dag_id = 'load_raw_data', schedule_interval = "@monthly", default_args 
     deportistas_raw_create >> deportistas_raw_populate
     resultados_raw_create << [juegos_raw_populate, deportistas_raw_populate, eventos_raw_populate]
     resultados_raw_create >> resultados_raw_populate
+    resultados_raw_populate >> metabase_paises_create >> metabase_paises_populate

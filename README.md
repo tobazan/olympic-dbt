@@ -6,6 +6,9 @@ Using *dbt - postgres*, *airflow* and *docker*
 
 ![](./sample_data/modelo_relacional.jpg "normalized")
 
+![](./sample_data/raw_dag.png "raw_dag")
+
+![](./sample_data/dim-fact_dag.png "dim-fact_dag")
 ___
 
 
@@ -33,6 +36,8 @@ Now we can start all DAGs and when they finish we can go to PG database containe
     $ psql -U <pg user name>
     $ \dt
 
-You shoul see the tables in the public schema
+To the tables in the public schema
 
-There you can query the new tables
+Also on http://localhost:3001 we can access Metabase and configure PG database and make some visualizations like this one
+
+![](./sample_data/viz_medallero.png "mapa-medallero")

@@ -82,3 +82,31 @@ AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-09-01T00:00:00+00:00
 [2022-10-26 14:47:47,291] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=load_raw_data, task_id=generos_raw_populate, execution_date=20220901T000000, start_date=20221026T144746, end_date=20221026T144747
 [2022-10-26 14:47:47,344] {local_task_job.py:156} INFO - Task exited with return code 0
 [2022-10-26 14:47:47,439] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2022-10-26 17:10:53,187] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: load_raw_data.generos_raw_populate scheduled__2022-09-01T00:00:00+00:00 [queued]>
+[2022-10-26 17:10:53,214] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: load_raw_data.generos_raw_populate scheduled__2022-09-01T00:00:00+00:00 [queued]>
+[2022-10-26 17:10:53,214] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2022-10-26 17:10:53,214] {taskinstance.py:1357} INFO - Starting attempt 1 of 2
+[2022-10-26 17:10:53,215] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2022-10-26 17:10:53,246] {taskinstance.py:1377} INFO - Executing <Task(PostgresOperator): generos_raw_populate> on 2022-09-01 00:00:00+00:00
+[2022-10-26 17:10:53,251] {standard_task_runner.py:52} INFO - Started process 257 to run task
+[2022-10-26 17:10:53,257] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'load_raw_data', 'generos_raw_populate', 'scheduled__2022-09-01T00:00:00+00:00', '--job-id', '10', '--raw', '--subdir', 'DAGS_FOLDER/raw-dag.py', '--cfg-path', '/tmp/tmpx09ma6hd', '--error-file', '/tmp/tmp7_fd1kz6']
+[2022-10-26 17:10:53,259] {standard_task_runner.py:80} INFO - Job 10: Subtask generos_raw_populate
+[2022-10-26 17:10:53,400] {task_command.py:369} INFO - Running <TaskInstance: load_raw_data.generos_raw_populate scheduled__2022-09-01T00:00:00+00:00 [running]> on host 553edc2a1daa
+[2022-10-26 17:10:53,709] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=load_raw_data
+AIRFLOW_CTX_TASK_ID=generos_raw_populate
+AIRFLOW_CTX_EXECUTION_DATE=2022-09-01T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-09-01T00:00:00+00:00
+[2022-10-26 17:10:53,774] {base.py:68} INFO - Using connection ID 'postgres-default' for task execution.
+[2022-10-26 17:10:53,823] {dbapi.py:208} INFO - Running statement: 
+                            INSERT INTO generos_raw (genero_id, genero) VALUES(1,'M');
+                            INSERT INTO generos_raw (genero_id, genero) VALUES(2,'F');
+                        , parameters: None
+[2022-10-26 17:10:53,848] {dbapi.py:216} INFO - Rows affected: 1
+[2022-10-26 17:10:53,928] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=load_raw_data, task_id=generos_raw_populate, execution_date=20220901T000000, start_date=20221026T171053, end_date=20221026T171053
+[2022-10-26 17:10:54,134] {local_task_job.py:156} INFO - Task exited with return code 0
+[2022-10-26 17:10:54,456] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

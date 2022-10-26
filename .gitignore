@@ -3,3 +3,4 @@ airflow/unittests.cfg
 airflow/dags/__pycache__
 *.pyc
 .env
+logs/
