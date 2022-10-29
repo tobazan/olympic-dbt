@@ -36,6 +36,7 @@ services:
       - .env
     volumes:
       - ./sample_data:/tmp/sample_data
+      - ./create_schema.sql:/docker-entrypoint-initdb.d/create_schema.sql
 
   scheduler:
     <<: *common

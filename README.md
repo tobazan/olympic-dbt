@@ -4,11 +4,11 @@ The idea behind this project is to model an star schema from raw normalized Olym
 
 Using *dbt - postgres*, *airflow* and *docker*
 
-![](./sample_data/modelo_relacional.jpg "normalized")
+![](./readme_images/modelo_relacional.jpg "normalized")
 
-![](./sample_data/raw_dag.png "raw_dag")
+![](./readme_images/raw_dag.png "raw_dag")
 
-![](./sample_data/dim-fact_dag.png "dim-fact_dag")
+![](./readme_images/dim-fact_dag.png "dim-fact_dag")
 ___
 
 
@@ -18,7 +18,7 @@ Before runing the command to **start containers** we need to create a **.env** f
 
 It should look like this
 
-![](./sample_data/env_vars.png "env-file")
+![](./readme_images/env_vars.png "env-file")
 
 Then we can run
 
@@ -26,7 +26,7 @@ Then we can run
 
 Once the Airflow webserver UI is available on http://localhost:8080 we have to **add a new conn** from  before starting any DAG 
 
-![](./sample_data/set-pg-conn.png "psql-default")
+![](./readme_images/set-pg-conn.png "psql-default")
 
 (has to match vars in the .env file)
 
@@ -36,8 +36,8 @@ Now we can start all DAGs and when they finish we can go to PG database containe
     $ psql -U <pg user name>
     $ \dt
 
-To the tables in the public schema
+To the tables in the *oly* schema
 
 Also on http://localhost:3001 we can access Metabase and configure PG database and make some visualizations like this one
 
-![](./sample_data/viz_medallero.png "mapa-medallero")
+![](./readme_images/viz_medallero.png "mapa-medallero")

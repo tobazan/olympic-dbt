@@ -13,13 +13,17 @@ default_args = {
     "catchup": True
 }
 
-with DAG(dag_id = 'dbt_star-schema', schedule_interval = "@monthly", default_args = default_args, description = "Creates DIM and FACT tables") as dag:
+with DAG(dag_id = 'dbt_star-schema', schedule_interval = "@monthly", default_args = default_args, description = "Validates expectations and creates DIM and FACT tables") as dag:
 
     start_sensor = ExternalTaskSensor(task_id='start_sensor',
                 poke_interval=30,
                 timeout=60*10,
                 retries=1,
                 external_dag_id='load_raw_data'
+    )
+
+    test_raw_tables = BashOperator(task_id='test_raw_tables',
+        bash_command='cd /opt/dbt/oly_dbt && dbt test'
     )
 
     deportistas_dim = BashOperator(task_id='deportistas_dim',
@@ -34,5 +38,5 @@ with DAG(dag_id = 'dbt_star-schema', schedule_interval = "@monthly", default_arg
         bash_command='cd /opt/dbt/oly_dbt && dbt run --select +resultados_fact'
     )
 
-    start_sensor >> [deportistas_dim, eventos_dim]
+    start_sensor >> test_raw_tables >> [deportistas_dim, eventos_dim]
     [deportistas_dim, eventos_dim] >> resultados_fact

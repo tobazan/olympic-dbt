@@ -1,7 +1,7 @@
 with deportistas_dim as (
 
     select *
-    from airflow.public.deportistas_dim
+    from airflow.oly.deportistas_dim
 
 ),
 eventos_dim as (
@@ -10,13 +10,13 @@ eventos_dim as (
         evento_id,
         evento,
         deporte
-    from airflow.public.eventos_dim
+    from airflow.oly.eventos_dim
 
 ),
 juegos as (
 
     select *
-    from airflow.public.juegos_raw
+    from airflow.oly.juegos_raw
 
 ),
 
@@ -42,7 +42,7 @@ resultados_fact as (
         ev.evento,
         ev.deporte
 
-    from airflow.public.resultados_raw
+    from airflow.oly.resultados_raw
 
     left join deportistas_dim de using (deportista_id)
     left join eventos_dim ev using (evento_id)

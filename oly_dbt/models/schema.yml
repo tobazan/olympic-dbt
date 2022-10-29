@@ -1,0 +1,78 @@
+version: 2
+
+sources:
+  - name: airflow
+    schema: oly
+    database: airflow
+    description: Postgres DB normalized raw tables from csv files 
+    tables:
+      - name: generos_raw 
+        columns:
+            - name: genero_id
+              description: Primary key
+              tests:
+                - dbt_expectations.expect_column_values_to_not_be_null
+                - dbt_expectations.expect_column_values_to_be_unique
+
+      - name: deportes_raw
+        columns:
+            - name: deporte_id
+              description: Primary key
+              tests:
+                - dbt_expectations.expect_column_values_to_not_be_null
+                - dbt_expectations.expect_column_values_to_be_unique
+
+      - name: equipos_raw
+        columns:
+            - name: equipo_id
+              description: Primary key
+              tests:
+                - dbt_expectations.expect_column_values_to_not_be_null
+                - dbt_expectations.expect_column_values_to_be_unique
+
+      - name: juegos_raw
+        columns:
+            - name: juego_id
+              description: Primary key
+              tests:
+                - dbt_expectations.expect_column_values_to_not_be_null
+                - dbt_expectations.expect_column_values_to_be_unique
+
+      - name: deportistas_raw
+        columns:
+            - name: deportista_id
+              description: Primary key
+              tests:
+                - dbt_expectations.expect_column_values_to_not_be_null
+                - dbt_expectations.expect_column_values_to_be_unique
+
+      - name: eventos_raw
+        columns:
+            - name: evento_id
+              description: Primary key
+              tests:
+                - dbt_expectations.expect_column_values_to_not_be_null
+                - dbt_expectations.expect_column_values_to_be_unique
+
+      - name: resultados_raw
+        columns:
+            - name: resultado_id
+              description: Primary key
+              tests:
+                - dbt_expectations.expect_column_values_to_not_be_null
+                - dbt_expectations.expect_column_values_to_be_unique 
+
+# models:
+#   - name: deportistas_dim
+#     tests:
+#       - dbt_expectations.expect
+  
+#   - name: eventos_dim
+#     tests:
+#       - dbt_expectations.expect
+  
+  
+#   - name: resultados_dim
+#     tests:
+#       - dbt_expectations.expect
+  

@@ -8,5 +8,5 @@ oly_dbt:
       password: airflow
       port: 5432
       dbname: airflow
-      schema: public
+      schema: oly
       threads: 4

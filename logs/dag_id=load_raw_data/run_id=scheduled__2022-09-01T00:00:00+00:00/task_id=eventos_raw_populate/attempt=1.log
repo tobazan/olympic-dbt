@@ -98,3 +98,28 @@ AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-09-01T00:00:00+00:00
 [2022-10-26 17:10:58,657] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=load_raw_data, task_id=eventos_raw_populate, execution_date=20220901T000000, start_date=20221026T171058, end_date=20221026T171058
 [2022-10-26 17:10:58,689] {local_task_job.py:156} INFO - Task exited with return code 0
 [2022-10-26 17:10:58,791] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2022-10-29 18:32:01,549] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: load_raw_data.eventos_raw_populate scheduled__2022-09-01T00:00:00+00:00 [queued]>
+[2022-10-29 18:32:01,564] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: load_raw_data.eventos_raw_populate scheduled__2022-09-01T00:00:00+00:00 [queued]>
+[2022-10-29 18:32:01,565] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2022-10-29 18:32:01,565] {taskinstance.py:1357} INFO - Starting attempt 1 of 2
+[2022-10-29 18:32:01,565] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2022-10-29 18:32:01,585] {taskinstance.py:1377} INFO - Executing <Task(PostgresOperator): eventos_raw_populate> on 2022-09-01 00:00:00+00:00
+[2022-10-29 18:32:01,590] {standard_task_runner.py:52} INFO - Started process 415 to run task
+[2022-10-29 18:32:01,594] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'load_raw_data', 'eventos_raw_populate', 'scheduled__2022-09-01T00:00:00+00:00', '--job-id', '18', '--raw', '--subdir', 'DAGS_FOLDER/raw-dag.py', '--cfg-path', '/tmp/tmp5lab_k3l', '--error-file', '/tmp/tmprfl310vu']
+[2022-10-29 18:32:01,595] {standard_task_runner.py:80} INFO - Job 18: Subtask eventos_raw_populate
+[2022-10-29 18:32:01,670] {task_command.py:369} INFO - Running <TaskInstance: load_raw_data.eventos_raw_populate scheduled__2022-09-01T00:00:00+00:00 [running]> on host d3faad85a14a
+[2022-10-29 18:32:01,775] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=load_raw_data
+AIRFLOW_CTX_TASK_ID=eventos_raw_populate
+AIRFLOW_CTX_EXECUTION_DATE=2022-09-01T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-09-01T00:00:00+00:00
+[2022-10-29 18:32:01,789] {base.py:68} INFO - Using connection ID 'postgres-default' for task execution.
+[2022-10-29 18:32:01,794] {dbapi.py:208} INFO - Running statement: COPY oly.eventos_raw FROM '/tmp/sample_data/evento.csv' DELIMITER ',' CSV HEADER;, parameters: None
+[2022-10-29 18:32:01,808] {dbapi.py:216} INFO - Rows affected: 765
+[2022-10-29 18:32:01,824] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=load_raw_data, task_id=eventos_raw_populate, execution_date=20220901T000000, start_date=20221029T183201, end_date=20221029T183201
+[2022-10-29 18:32:01,847] {local_task_job.py:156} INFO - Task exited with return code 0
+[2022-10-29 18:32:01,916] {local_task_job.py:273} INFO - 1 downstream tasks scheduled from follow-on schedule check

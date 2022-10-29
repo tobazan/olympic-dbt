@@ -3,7 +3,7 @@ with deportes as (
     select
         deporte_id,
         deporte
-    from airflow.public.deportes_raw
+    from airflow.oly.deportes_raw
 
 ),
 
@@ -15,7 +15,7 @@ eventos_dim as (
         deporte_id,
         d.deporte
 
-    from airflow.public.eventos_raw
+    from airflow.oly.eventos_raw
 
     left join deportes d using (deporte_id)
 
